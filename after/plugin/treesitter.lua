@@ -5,6 +5,7 @@ require 'nvim-treesitter.configs'.setup {
     "typescript",
     "python",
     "json",
+    "go",
     "c",
     "lua",
     "vim",
