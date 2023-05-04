@@ -22,6 +22,11 @@ scoop install vcredist2022
 ```
 (You can remove this installer with `scoop uninstall vcredist2022`)
 
+## Install GNU Compiler Collection (GCC) and binutils
+```bash
+scoop install gcc
+```
+
 ## Install Neovim
 > neovim – Neovim’s latest stable release.
 ```bash
