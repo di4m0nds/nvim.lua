@@ -1,3 +1,6 @@
+# Windows - Preview
+![screenshot sample](./../../.assets/sample.png)
+
 # Windows - step by step
 
 ## Installing scoop
