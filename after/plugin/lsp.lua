@@ -2,12 +2,24 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-  "tsserver",
-  "lua_ls",
-  "rust_analyzer",
-  "gopls",
-})
+-- Read the list of language servers from the file
+local servers_file = io.open('lspservers', 'r')
+local servers_list = {}
+
+if servers_file then
+  for line in servers_file:lines() do
+    local server, enabled = line:match('^(%w+)=(%a+)$')
+
+    if server and enabled == 'true' then
+      -- servers_list[#servers_list+1] = server
+      table.insert(servers_list, server)
+    end
+  end
+
+  servers_file:close()
+end
+
+lsp.ensure_installed(servers_list)
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
