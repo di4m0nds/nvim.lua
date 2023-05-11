@@ -42,3 +42,20 @@ vim.opt.completefunc = 'v:lua.WildDirectoryPath'
 
 -- Map the <Leader>. key combination in normal mode to the ChangeDirectory() function for easy access.
 vim.api.nvim_set_keymap('n', '<leader>.', ':lua RedirectTo()<CR>', { noremap = true, silent = true })
+
+-- Resizes window
+-- -- Resize window vertically
+function RWV(size, direction) -- ex: RWV(5, -1) | RWV(5, 1)
+  local current_win = vim.api.nvim_get_current_win()
+  local current_size = vim.api.nvim_win_get_height(current_win)
+  local new_size = current_size + (size * direction)
+  vim.api.nvim_win_set_height(current_win, new_size)
+end
+
+-- -- Resize window horizontally
+function RWH(size, direction)
+  local current_win = vim.api.nvim_get_current_win()
+  local current_size = vim.api.nvim_win_get_width(current_win)
+  local new_size = current_size + (size * direction)
+  vim.api.nvim_win_set_width(current_win, new_size)
+end
