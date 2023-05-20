@@ -6,8 +6,9 @@ local theme
 local teal = "#209999"
 local gray = "#808080"
 local yellow = "#fcf403"
+local jadeGreen = "#04bf59"
 
-local stringColor = { bg = "none", fg = teal }
+local stringColor = { bg = "none", fg = jadeGreen }
 
 local lineNmbr = { bg = "none", fg = gray }
 local focusLineNmbr = { bg = "none", fg = yellow }
