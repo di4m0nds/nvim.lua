@@ -49,11 +49,9 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 -- Vertical Resize
-vim.api.nvim_set_keymap('n', '<leader>+', ':lua RWV(5, 1)<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>-', ':lua RWV(5, -1)<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>+", ":lua RWV(5, 1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>-", ":lua RWV(5, -1)<CR>", { noremap = true, silent = true })
 
--- Set key mapping for normal mode to trigger substitution command
-vim.api.nvim_set_keymap('n', '<Leader>s', ':%s//g<Left><Left>', { silent = true })
-
--- Set key mapping for visual mode to trigger the Lua function
-vim.api.nvim_set_keymap('v', '<Leader>s', ':lua replace_visual_selection_only()<CR>', { silent = true })
+-- Set key mapping for replace strings
+vim.keymap.set("n", "<leader>s", ":%s//g<Left><Left>", { silent = true })
+vim.keymap.set("v", "<leader>s", ":s//g<Left><Left>", { silent = true })
