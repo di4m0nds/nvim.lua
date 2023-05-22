@@ -71,4 +71,15 @@ return require("packer").startup(function(use)
       require("toggleterm").setup()
     end,
   })
+
+  use({
+    "akinsho/flutter-tools.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim", -- optional for vim.ui.select
+    },
+    config = function()
+      require("flutter-tools").setup({})
+    end,
+  })
 end)
