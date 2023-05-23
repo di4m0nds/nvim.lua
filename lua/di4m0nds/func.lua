@@ -59,14 +59,3 @@ function RWH(size, direction)
   local new_size = current_size + (size * direction)
   vim.api.nvim_win_set_width(current_win, new_size)
 end
-
--- Function to run a command in the terminal
-function RunCommandInTerminal()
-  local compileCommand = vim.fn.input('Compile command: ')
-  if compileCommand == "" then
-    print("Aborted!")
-    return
-  end
-  local command = "! " .. compileCommand
-  vim.cmd(command)
-end

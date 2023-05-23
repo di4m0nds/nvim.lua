@@ -55,6 +55,3 @@ vim.api.nvim_set_keymap("n", "<leader>-", ":lua RWV(5, -1)<CR>", { noremap = tru
 -- Set key mapping for replace strings
 vim.keymap.set("n", "<leader>s", ":%s//g<Left><Left>", { silent = true })
 vim.keymap.set("v", "<leader>s", ":s//g<Left><Left>", { silent = true })
-
--- Key mapping for running a command in the terminal
-vim.keymap.set("n", "<leader>c", ":lua RunCommandInTerminal()<CR>", { silent = true })
