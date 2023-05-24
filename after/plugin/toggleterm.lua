@@ -47,6 +47,24 @@ end
 
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
 
+-- Function change terminal direction
+local TERMINAL_DIRECTON = "tab"
+
+function SetTerminalDirection()
+  local direction = vim.fn.input("Terminal direction (h: horizontal, v: vertical, t: tab, f: float): ")
+  if direction == "h" then
+    TERMINAL_DIRECTON = "horizontal"
+  elseif direction == "v" then
+    TERMINAL_DIRECTON = "vertical"
+  elseif direction == "t" then
+    TERMINAL_DIRECTON = "tab"
+  elseif direction == "f" then
+    TERMINAL_DIRECTON = "float"
+  else
+    print("Invalid direction. Please choose one of the provided options.")
+  end
+end
+
 -- Function to run a command in the terminal
 function RunCommandInTerminal()
   local compileCommand = vim.fn.input("Compile command: ")
@@ -58,7 +76,7 @@ function RunCommandInTerminal()
 
   local term = require("toggleterm.terminal").Terminal
   local cmd = term:new({
-    direction = "tab",
+    direction = TERMINAL_DIRECTON,
     hidden = true,
     close_on_exit = true,
   })
@@ -66,4 +84,4 @@ function RunCommandInTerminal()
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(compileCommand .. "<CR>", true, false, true), "n", true)
 end
 
-vim.keymap.set("n", "<leader>c", ":lua RunCommandInTerminal()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>cc", ":lua RunCommandInTerminal()<CR>", { silent = true })
