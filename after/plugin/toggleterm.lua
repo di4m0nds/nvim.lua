@@ -67,7 +67,8 @@ end
 
 -- Function to run a command in the terminal
 function RunCommandInTerminal()
-  local compileCommand = vim.fn.input("Compile command: ")
+  -- local compileCommand = vim.fn.input("Compile command: ")
+  local compileCommand = vim.fn.input("Compile command: ", "", "file")
 
   if compileCommand == "" then
     print("Aborted!")
