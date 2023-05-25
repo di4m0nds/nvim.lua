@@ -52,6 +52,20 @@ function RWV(size, direction) -- ex: RWV(5, -1) | RWV(5, 1)
   vim.api.nvim_win_set_height(current_win, new_size)
 end
 
+-- -- Expand window vertically
+function ExpandWindowVertically()
+  local current_win = vim.api.nvim_get_current_win()
+  local lines = vim.api.nvim_get_option("lines")
+  vim.api.nvim_win_set_height(current_win, lines)
+end
+
+-- Restore the original height of the current window
+function RestoreWindowVertically()
+  local current_win = vim.api.nvim_get_current_win()
+  local height = 20
+  vim.api.nvim_win_set_height(current_win, height)
+end
+
 -- -- Resize window horizontally
 function RWH(size, direction)
   local current_win = vim.api.nvim_get_current_win()

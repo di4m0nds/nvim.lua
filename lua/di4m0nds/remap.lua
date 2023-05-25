@@ -48,9 +48,11 @@ vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
 end)
 
--- Vertical Resize
+-- Vertical Resize - Expand - Restore
 vim.api.nvim_set_keymap("n", "<leader>+", ":lua RWV(5, 1)<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>-", ":lua RWV(5, -1)<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>we", ":lua ExpandWindowVertically()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>wc", ":lua RestoreWindowVertically()<CR>", { noremap = true, silent = true })
 
 -- Set key mapping for replace strings
 vim.keymap.set("n", "<leader>s", ":%s//g<Left><Left>", { silent = true })
