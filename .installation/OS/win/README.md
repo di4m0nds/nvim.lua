@@ -1,5 +1,5 @@
 # Windows - Preview
-![screenshot sample](./../../.assets/sample.png)
+![screenshot sample](./../../../.assets/sample.png)
 
 # Windows - step by step
 
