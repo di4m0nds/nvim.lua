@@ -1,0 +1,44 @@
+{
+    // VIM CONF
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.showcmd": true,
+    "vim.normalModeKeyBindings": [
+        {
+          "before": ["ctrl+k"],
+          "commands": ["editor.action.showHover"]
+        },
+        {
+          "before": ["K"],
+          "commands": ["editor.action.moveLinesUpAction"],
+          "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+          "before": ["J"],
+          "commands": ["editor.action.moveLinesDownAction"],
+          "when": "editorTextFocus && !editorReadonly"
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+          "before": ["K"],
+          "commands": ["editor.action.moveLinesUpAction"],
+          "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+          "before": ["J"],
+          "commands": ["editor.action.moveLinesDownAction"],
+          "when": "editorTextFocus && !editorReadonly"
+        },
+    ],
+    
+    // EDITOR CONF
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.fixAll.eslint": false
+    },
+}
