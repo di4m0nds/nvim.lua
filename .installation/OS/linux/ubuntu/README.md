@@ -30,7 +30,6 @@ sudo apt install neovim
     ```bash
     alias nvim='~/.local/bin/nvim-linux64/bin/nvim'
     ```
-- Finally run `nvim --version`
 
 4. Verify the installation by checking the version of Neovim:
 ```shell
@@ -40,12 +39,6 @@ nvim --version
 5. Install required dependencies:
 ```shell
 sudo apt install gcc ripgrep
-```
-
-6.  Installing Packer (Plugin Manager) Clone the packer.nvim repository:
-```shell
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
 6.  Steps to navigate to the .config directory and clone the repository with the name "nvim":
@@ -66,7 +59,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ```
 
 8.  Navigate to the `~/.config/nvim/lua/di4m0nds` directory in your terminal:
-- Run the following command to execute the packer.lua file:
+- Run the following command to edit the packer.lua file:
     ```shell
     nvim packer.lua
     ```
@@ -78,6 +71,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ```ruby
     :PackerInstall
     ```
+
 ## LSP Dependencies
 
 1. `lua-language-server`
