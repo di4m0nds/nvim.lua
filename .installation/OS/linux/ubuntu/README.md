@@ -71,3 +71,16 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ```ruby
     :PackerInstall
     ```
+
+## LSP Dependencies
+
+1. `lua-language-server`
+    - Go to the [LuaLS/lua-language-server releases page on GitHub](https://github.com/LuaLS/lua-language-server/releases). Download the compressed tar version (.tar.gz).
+    - Create a folder `lua-language-server-linux64` and extract the downloaded tar file in `~/.local/bin`
+        ```shell
+        tar xzvf lua-language-server-<version...>-linux-x64.tar.gz -C ./lua-language-server-linux64
+        ```
+    - Link bin file in `~/.local/bin`
+        ```shell
+        ln -s lua-language-server-linux64/bin/lua-language-server ./lua-language-server
+        ```
