@@ -107,7 +107,7 @@ alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias alert='notify-send --urgency=critical -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -141,6 +141,12 @@ alias nvim='~/.local/bin/nvim'
 alias v='~/.local/bin/nvim'
 
 alias x='exit'
+alias ..='cd ..'
+
+alias gst='git status'
+alias gadd='git add'
+alias gcom='git commit'
+alias gsp='git push'
 
 # Ubuntu Terminal Prompt - Show Git Status
 parse_git_branch() {
