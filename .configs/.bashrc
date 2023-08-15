@@ -147,6 +147,7 @@ alias gst='git status'
 alias gadd='git add'
 alias gcom='git commit'
 alias gsp='git push'
+alias glg='git log --all --oneline -10 --decorate --graph'
 
 # Ubuntu Terminal Prompt - Show Git Status
 parse_git_branch() {
