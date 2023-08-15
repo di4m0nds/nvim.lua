@@ -151,7 +151,8 @@ alias gsp='git push'
 # Ubuntu Terminal Prompt - Show Git Status
 parse_git_branch() {
     local echoString=""
-    local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+    #local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+    local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
 
     if [[ -n "$branch" ]]; then
       echoString+="branch:$branch"
