@@ -1,3 +1,6 @@
+# Ubuntu - Preview
+![screenshot sample](./../../../../.assets/preview.png)
+
 # Neovim Installation Instructions for Ubuntu
 
 This guide will walk you through the installation process on Ubuntu, allowing you to harness the power of Neovim in your development workflow.
