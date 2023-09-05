@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
   # Define colors
   RESET_COLOR="\[\e[0m\]"
   GREEN="\[\e[38;5;48m\]"
@@ -70,7 +70,8 @@ if [ "$color_prompt" = yes ]; then
   BOLD_RED="\[\e[1;31m\]"
   
   # Set the new prompt with Git status and branch
-  PS1="${RESET_COLOR}╭${RESET_COLOR}─${GREEN}${BOLD_GREEN}\u${RESET_COLOR} at ${CYAN}${BOLD_CYAN}\h${RESET_COLOR} in ${BOLD_PURPLE}\w${BOLD_GREEN}\$(parse_git_status)\[${BOLD_RED}\$(parse_git_branch)\]\n${RESET_COLOR}╰${RESET_COLOR}─➤ "
+  # PS1="${RESET_COLOR}╭${RESET_COLOR}─${GREEN}${BOLD_GREEN}\u${RESET_COLOR} at ${CYAN}${BOLD_CYAN}\h${RESET_COLOR} in ${BOLD_PURPLE}\w${BOLD_GREEN}\$(parse_git_status)\[${BOLD_RED}\$(parse_git_branch)\]\n${RESET_COLOR}╰${RESET_COLOR}─➤ "
+  PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]${BOLD_GREEN}\$(parse_git_status)\[${BOLD_RED}\$(parse_git_branch)\]\n${RESET_COLOR}\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
