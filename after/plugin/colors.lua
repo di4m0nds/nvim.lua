@@ -19,7 +19,7 @@ function SetTheme()
     theme = "gruber-darker"
     chooseTheme = false
   else
-    theme = "rose-pine"
+    theme = "darkrose"
     chooseTheme = true
   end
 

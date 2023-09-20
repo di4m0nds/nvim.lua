@@ -62,7 +62,7 @@ end
 -- Restore the original height of the current window
 function RestoreWindowVertically()
   local current_win = vim.api.nvim_get_current_win()
-  local height = 20
+  local height = 10
   vim.api.nvim_win_set_height(current_win, height)
 end
 

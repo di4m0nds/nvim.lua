@@ -14,15 +14,9 @@ return require("packer").startup(function(use)
     requires = { { "nvim-lua/plenary.nvim" } },
   })
 
-  use({
-    "blazkowolf/gruber-darker.nvim",
-    as = "gruber-darker",
-  })
-
-  use({
-    "rose-pine/neovim",
-    as = "rose-pine",
-  })
+  -- Themes
+  use({ "blazkowolf/gruber-darker.nvim", as = "gruber-darker" })
+  use({ "water-sucks/darkrose.nvim", as = "darkrose" })
 
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
   use("nvim-treesitter/playground")
@@ -71,4 +65,6 @@ return require("packer").startup(function(use)
       require("toggleterm").setup()
     end,
   })
+
+  use("ziglang/zig.vim")
 end)

@@ -3,3 +3,4 @@ pyright=false
 tsserver=false
 lua_ls=true
 gopls=false
+zls=true

@@ -12,7 +12,7 @@ require("toggleterm").setup({
   terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
   persist_size = true,
   persist_mode = true,      -- if set to true (default) the previous terminal mode will be remembered
-  direction = "tab",        -- 'vertical' | 'horizontal' | 'tab' | 'float'
+  direction = "horizontal", -- 'vertical' | 'horizontal' | 'tab' | 'float'
   close_on_exit = true,     -- close the terminal window when the process exits
   -- Change the default shell. Can be a string or a function returning a string
   shell = vim.o.shell,
@@ -48,7 +48,7 @@ end
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
 
 -- Function change terminal direction
-local TERMINAL_DIRECTON = "tab"
+local TERMINAL_DIRECTON = "horizontal"
 
 function SetTerminalDirection()
   local direction = vim.fn.input("Terminal direction (h: horizontal, v: vertical, t: tab, f: float): ")
