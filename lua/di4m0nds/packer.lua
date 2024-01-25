@@ -67,4 +67,6 @@ return require("packer").startup(function(use)
   })
 
   use("ziglang/zig.vim")
+
+  use 'mfussenegger/nvim-jdtls'
 end)

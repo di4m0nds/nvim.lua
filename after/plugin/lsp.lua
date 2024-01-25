@@ -65,11 +65,36 @@ lsp.setup_servers({ "tsserver", "eslint" })
 lsp.format_on_save({
   servers = {
     ["lua_ls"] = { "lua" },
-    ["rust_analyzer"] = { "rust" },
+    -- ["rust_analyzer"] = { "rust" },
   },
 })
 
-lsp.setup()
+lsp.setup({
+  server = 'jdtls',
+  config = {
+    settings = {
+      java = {
+        signatureHelp = { enabled = true },
+        contentProvider = { preferred = 'fernflower' },
+        sourceFolders = {
+          'src',
+          'src/com/di4m0nds',
+          'src/com/di4m0nds/spawnplugin',
+          'src/com/di4m0nds/hologramplugin',
+        },
+        configuration = {
+          runtimes = {
+            {
+              name = 'JavaSE-1.8',
+              path = '/usr/lib/jvm/java-21-openjdk-amd64',
+            },
+          },
+        },
+      },
+    },
+    classpath = { '~/spigot-api/spigot-api-1.20.1.jar' },
+  },
+})
 
 vim.diagnostic.config({
   virtual_text = true,
@@ -86,7 +111,7 @@ null_ls.setup({
   sources = {
     formatting.stylua,
     formatting.black.with({ extra_args = { "--fast" } }),
-    diagnostics.flake8,
+    -- diagnostics.flake8,
     diagnostics.eslint,
   },
 })
