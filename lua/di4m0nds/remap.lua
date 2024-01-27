@@ -52,6 +52,7 @@ end)
 vim.api.nvim_set_keymap("n", "<leader>+", ":lua RWV(5, 1)<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>-", ":lua RWV(5, -1)<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>we", ":lua ExpandWindowVertically()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>he", ":lua ExpandWindowHorizontally()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>wc", ":lua RestoreWindowVertically()<CR>", { noremap = true, silent = true })
 
 -- Set key mapping for replace strings

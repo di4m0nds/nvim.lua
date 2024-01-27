@@ -59,6 +59,14 @@ function ExpandWindowVertically()
   vim.api.nvim_win_set_height(current_win, lines)
 end
 
+-- -- Expand window horizontally
+function ExpandWindowHorizontally()
+  local current_win = vim.api.nvim_get_current_win()
+  local current_width = vim.fn.winwidth(0)
+  local desired_width = math.floor((current_width * 2) / 100)
+  vim.api.nvim_win_set_width(current_win, desired_width)
+end
+
 -- Restore the original height of the current window
 function RestoreWindowVertically()
   local current_win = vim.api.nvim_get_current_win()
