@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
   # Define colors
   RESET_COLOR="\[\e[0m\]"
   GREEN="\[\e[38;5;48m\]"
@@ -107,8 +107,18 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=critical -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+custom_alert() {
+    local custom_message="$1"
+    notify-send --urgency=critical -i "$([ $? = 0 ] && echo terminal || echo error)" "$custom_message"
+    paplay $HOME/Music/mixkit_alert.wav
+}
+alias alert='custom_alert'
+
+alias t10a='timer 10s && alert "Finished Timer"'
+alias break='timer 15m && alert "Lets back to work!"'
+alias work='timer 45m && alert "Take a break!"'
+
+alias showdate='. $HOME/bash_programs/datetime.sh'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -144,10 +154,10 @@ alias v='~/.local/bin/nvim'
 alias x='exit'
 alias ..='cd ..'
 
-alias gst='git status'
-alias gadd='git add'
-alias gcom='git commit'
-alias gsp='git push'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
 alias glg='git log --all --oneline -10 --decorate --graph'
 
 # Ubuntu Terminal Prompt - Show Git Status
@@ -184,3 +194,11 @@ parse_git_status() {
 
     echo "$echoString"
 }
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+
+# Java
+export JAVA_HOME=/opt/jdk-21.0.1
+export PATH=$PATH:$JAVA_HOME/bin
