@@ -69,4 +69,10 @@ return require("packer").startup(function(use)
   use("ziglang/zig.vim")
 
   use 'mfussenegger/nvim-jdtls'
+
+  -- Package info (versioning)
+  use({
+    "vuki656/package-info.nvim",
+    requires = "MunifTanjim/nui.nvim",
+  })
 end)
