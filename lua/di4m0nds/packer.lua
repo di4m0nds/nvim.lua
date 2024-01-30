@@ -16,7 +16,8 @@ return require("packer").startup(function(use)
 
   -- Themes
   use({ "blazkowolf/gruber-darker.nvim", as = "gruber-darker" })
-  use({ "water-sucks/darkrose.nvim", as = "darkrose" })
+  use({ "oxfist/night-owl.nvim", as = "night-owl" })
+  use { "rose-pine/neovim", as = "rose-pine" }
 
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
   use("nvim-treesitter/playground")
