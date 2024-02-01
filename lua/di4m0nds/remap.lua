@@ -60,4 +60,4 @@ vim.keymap.set("n", "<leader>s", ":%s//g<Left><Left>", { silent = true })
 vim.keymap.set("v", "<leader>s", ":s//g<Left><Left>", { silent = true })
 
 -- Set Terminal Direction
-vim.keymap.set("n", "<leader>tt", ":lua SetTerminalDirection()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>td", ":lua SetTerminalDirection()<CR>", { silent = true })
