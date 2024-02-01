@@ -114,11 +114,14 @@ custom_alert() {
 }
 alias alert='custom_alert'
 
-alias t10a='timer 10s && alert "Finished Timer"'
-alias break='timer 15m && alert "Lets back to work!"'
-alias work='timer 45m && alert "Take a break!"'
+# alias t10a='timer 10s && alert "Finished Timer"'
+
+alias timer-break='timer 15m && alert "Lets back to work!"'
+alias timer-work='timer 45m && alert "Take a break!"'
 
 alias showdate='. $HOME/bash_programs/datetime.sh'
+
+alias oterm='gnome-terminal --working-directory="$PWD" --geometry=120x40+10+10'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
