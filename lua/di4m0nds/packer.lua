@@ -80,4 +80,7 @@ return require("packer").startup(function(use)
     "vuki656/package-info.nvim",
     requires = "MunifTanjim/nui.nvim",
   })
+
+  --
+  use { "folke/twilight.nvim" }
 end)
