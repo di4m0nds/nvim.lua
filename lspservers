@@ -5,5 +5,3 @@ lua_ls=true
 gopls=false
 zls=true
 jdtls=true
-sonarlint-language-server=true
-trivy=true
