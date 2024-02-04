@@ -8,7 +8,8 @@
 
 ## OS Installations
 * [Windows - Scoop Package Manager](https://github.com/di4m0nds/nvim.lua/tree/master/.installation/OS/win)
-* [Ubuntu](https://github.com/di4m0nds/nvim.lua/tree/master/.installation/OS/linux/ubuntu)
+* [Linux](https://github.com/di4m0nds/nvim.lua/tree/master/.installation/OS/linux)
+  * [Ubuntu](https://github.com/di4m0nds/nvim.lua/tree/master/.installation/OS/linux/ubuntu)
 
 ## References:
 * [Neovim GitHub Repository](https://github.com/neovim/neovim) - Official GitHub repository for Neovim.
