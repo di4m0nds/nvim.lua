@@ -10,8 +10,8 @@ require('package-info').setup({
     style = {
       -- up_to_date = "|  ", -- Icon for up to date dependencies
       -- outdated = "|  ", -- Icon for outdated dependencies
-      up_to_date = "| ✔ ", -- Checkmark for up-to-date dependencies
-      outdated = "| ✖ ", -- Exclamation mark for outdated dependencies
+      up_to_date = " | ✔ ", -- Checkmark for up-to-date dependencies
+      outdated = " | ✖ ", -- Exclamation mark for outdated dependencies
     },
   },
   autostart = true,               -- Whether to autostart when `package.json` is opened

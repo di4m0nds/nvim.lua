@@ -2,6 +2,7 @@ rust_analyzer=false
 pyright=false
 tsserver=true
 lua_ls=true
+astro-ls=true
 gopls=false
 zls=true
 jdtls=true

@@ -41,8 +41,9 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.set_preferences({
-  suggest_lsp_servers = false,
-  sign_icons = { error = "E", warn = "W", hint = "H", info = "I" },
+  suggest_lsp_servers = true,
+  sign_icons = { error = "✗", warn = "⚠", hint = "➤", info = "ℹ" },
+  -- sign_icons = { error = "E", warn = "W", hint = "H", info = "I" },
 })
 
 lsp.on_attach(function(client, bufnr)
@@ -60,11 +61,15 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.setup_servers({ "tsserver", "eslint" })
+lsp.setup_servers({
+  "tsserver",
+  -- "eslint"
+})
 
 lsp.format_on_save({
   servers = {
     ["lua_ls"] = { "lua" },
+    ["astro-ls"] = { "astro" },
     -- ["rust_analyzer"] = { "rust" },
   },
 })
@@ -127,3 +132,5 @@ require("typescript").setup({
     end,
   },
 })
+
+vim.keymap.set("n", "<leader>ls", ":LspInfo<cr>", {})
