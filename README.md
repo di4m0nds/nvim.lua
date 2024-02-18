@@ -6,6 +6,9 @@
 
 > _Please make sure you have Neovim installed with a version equal to or greater than 0.9.0._
 
+## Preview
+![screenshot sample](./.assets/preview.png)
+
 ## OS Installations
 * [Windows - Scoop Package Manager](https://github.com/di4m0nds/nvim.lua/tree/master/.installation/OS/win)
 * [Linux](https://github.com/di4m0nds/nvim.lua/tree/master/.installation/OS/linux)
