@@ -1,8 +1,8 @@
-rust_analyzer=false
+rust_analyzer=true
 pyright=false
 tsserver=true
 lua_ls=true
 astro-ls=true
-gopls=false
+gopls=true
 zls=true
 jdtls=true

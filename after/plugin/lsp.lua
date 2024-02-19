@@ -69,8 +69,8 @@ lsp.setup_servers({
 lsp.format_on_save({
   servers = {
     ["lua_ls"] = { "lua" },
-    ["astro-ls"] = { "astro" },
-    -- ["rust_analyzer"] = { "rust" },
+    -- ["astro-ls"] = { "astro" },
+    ["rust_analyzer"] = { "rust" },
   },
 })
 
