@@ -17,7 +17,7 @@ local focusLineNmbr = { bg = "none", fg = yellow }
 -- Change Theme
 function SetTheme()
   if chooseTheme == 1 then
-    theme = "gruber-darker"
+    theme = "rose-pine"
     focusLineNmbr = { bg = "none", fg = yellow }
     chooseTheme = 2
   elseif chooseTheme == 2 then
@@ -25,7 +25,7 @@ function SetTheme()
     focusLineNmbr = { bg = "none", fg = lightBlue }
     chooseTheme = 3
   elseif chooseTheme == 3 then
-    theme = "rose-pine"
+    theme = "gruber-darker"
     focusLineNmbr = { bg = "none", fg = lightBlue }
     chooseTheme = 1
   end
