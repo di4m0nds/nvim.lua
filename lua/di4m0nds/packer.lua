@@ -18,6 +18,8 @@ return require("packer").startup(function(use)
     requires = { { "nvim-lua/plenary.nvim" } },
   })
 
+  use { 'nvim-telescope/telescope-symbols.nvim' }
+
   -- Themes
   use({ "blazkowolf/gruber-darker.nvim", as = "gruber-darker" })
   use({ "oxfist/night-owl.nvim", as = "night-owl" })
