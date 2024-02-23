@@ -32,12 +32,7 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
--- opt.colorcolumn = "80"
-
 vim.g.mapleader = " "
-
--- vim.o.foldtext = ''
--- vim.o.fillchars = 'fold:'
 
 -- Set netrw to display detailed listing by default
 vim.g.netrw_liststyle = 1
@@ -45,6 +40,10 @@ vim.g.netrw_liststyle = 1
 -- Display such an arrow when wrapping lines
 opt.showbreak = "↘"
 
--- This appends a custom character ("↴") to represent the end of each line (eol).
-opt.listchars:append("eol:↴")
+vim.opt.listchars = {
+  tab = "| ", -- »
+  space = " ",
+  eol = "↴",
+}
+
 opt.list = true
