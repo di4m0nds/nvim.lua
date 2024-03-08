@@ -114,7 +114,7 @@ custom_alert() {
 }
 alias alert='custom_alert'
 
-# alias t10a='timer 10s && alert "Finished Timer"'
+alias t10a='timer 10s && alert "Finished Timer"'
 
 alias timer-break='timer 15m && alert "Lets back to work!"'
 alias timer-work='timer 45m && alert "Take a break!"'

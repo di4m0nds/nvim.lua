@@ -41,7 +41,7 @@ vim.g.netrw_liststyle = 1
 opt.showbreak = "↘"
 
 vim.opt.listchars = {
-  tab = "| ", -- »
+  tab = "  ", -- »
   space = " ",
   eol = "↴",
 }
